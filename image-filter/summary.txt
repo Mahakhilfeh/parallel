@@ -1,0 +1,19 @@
+1-for serial code apply-filter.cpp :
+
+The C++ program is designed to perform convolution on a 2D matrix, simulating image processing with a specified kernel. The program takes two input files as command-line arguments – one containing the input matrix representing a 2D image and the other specifying the convolution kernel. The convolution operation involves sliding the kernel over the matrix, multiplying corresponding elements, and summing the results to generate a new matrix. Importantly, the program employs the <chrono> library to measure the execution time of the convolution process. The final result of the convolution is saved in a file named "serialresult.txt," and the program prints the measured execution time in milliseconds. This comprehensive functionality makes the program a valuable tool for understanding and evaluating the performance of convolution operations in image processing.
+
+
+Time:
+when using the "edge_kernal.txt" file, the measured execution time is approximately 7 milliseconds. 
+when using the "sharpen_kernal.txt" file, the measured execution time is approximately 10 milliseconds. 
+when using the "blur_kernal.txt" file, the measured execution time is approximately 5 milliseconds. 
+
+2- for openmp papply-filter.cpp:
+
+This program speeds up image processing using OpenMP, a tool for parallel programming. It applies a filter (kernel) to an image to enhance certain features. The code reads the filter and image from files, then divides the image into parts, assigning each part to a different group of threads. This parallel approach makes the convolution, a mathematical operation for image enhancement, faster. The execution time is measured and displayed. Users can specify the number of threads to use. The result is saved in a file named "parallelresult.txt." In simpler terms, it's a program that makes images look better by running calculations on them faster, thanks to the power of multiple computer processors working together.
+
+Time:
+when using the "edge_kernal.txt" file, the measured execution time is approximately 4 milliseconds. 
+when using the "sharpen_kernal.txt" file, the measured execution time is approximately 6 milliseconds. 
+when using the "blur_kernal.txt" file, the measured execution time is approximately 1 milliseconds. 
+
